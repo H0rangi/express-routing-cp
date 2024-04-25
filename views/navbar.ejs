@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+ <style>
+    *, 
+*::before, 
+*::after {
+  box-sizing: border-box; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  background-color: #CEDAE3;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  width: 100%;
+  height: 10vh;
+  background-color: #242327;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 1em;
+}
+
+.nav__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav__logo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+  font-size: 1.25rem;
+  color: hsla(0,0%,100%, 0.7);
+}
+.nav__link {
+  transition: all 0.3s ease;
+}
+.nav__link:hover {
+  color: white;
+  transform: translateY(-3px);
+}
+
+.btn {
+  border: 0;
+  border-radius: 20px;
+  padding: 0.75em 2.25em;
+  font-family: inherit;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn--primary {
+  background-color: #4288AA;
+  color: hsla(0, 100%, 100%, 0.8);
+}
+.btn--primary:hover {
+  border-radius: 15px;
+  background-color: rgba(66,136,170, 0.9);
+}
+
+/* Media Queries */
+@media screen and  (width <= 768px) {
+  .header {
+    height: 40vh;
+    padding: 1em 1em;
+  }
+  .nav__container {
+    height: 100%;
+    flex-direction: column;
+    align-items: space-between;
+  }
+}
+@media screen and (width <= 360px) {
+    .nav__links {
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+ </style>
+    
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav__container">
+          <div class="nav__logo">
+            <h1 class="logo">Logo</h1>
+          </div>
+          <ul class="nav__links">
+            <li class="nav__link">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav__link">
+              <a href="/services">Services</a>
+            </li>
+          </ul>
+          <a href="/contact"> <button class="btn btn--primary">Contact</button></a>
+        </nav>
+      </header>
+</body>
+</html>
+
+
